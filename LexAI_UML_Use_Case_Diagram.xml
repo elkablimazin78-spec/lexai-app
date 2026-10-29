@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" version="24.7.17" type="device">
+  <diagram id="lexai-use-cases" name="LexAI - Cas d’utilisation">
+    <mxGraphModel dx="1800" dy="1600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1600" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="LexAI | Diagramme UML de cas d’utilisation" style="text;html=0;whiteSpace=wrap;align=left;fontColor=#0F172A;fontSize=30;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="60" y="30" width="1650" height="55" />
+        </mxCell>
+        <mxCell id="subtitle" value="Acteurs, services métiers et fonctions communes de la plateforme juridique et fiscale" style="text;html=0;whiteSpace=wrap;align=left;fontColor=#0F172A;fontSize=17;fontColor=#475569;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="60" y="95" width="1650" height="40" />
+        </mxCell>
+        <mxCell id="system" value="Plateforme LexAI" style="swimlane;html=0;startSize=50;horizontal=1;rounded=0;collapsible=0;fillColor=#F8FAFC;swimlaneFillColor=#FFFFFF;strokeColor=#94A3B8;fontColor=#0F172A;fontSize=22;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="330" y="180" width="1120" height="1160" />
+        </mxCell>
+        <mxCell id="director" value="Directeur fiscal&#10;et juridique" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=0;whiteSpace=wrap;outlineConnect=0;fontSize=15;fontColor=#0F172A;strokeColor=#334155;fillColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="120" y="310" width="65" height="100" />
+        </mxCell>
+        <mxCell id="jurist" value="Juriste d’entreprise /&#10;Risk Manager" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=0;whiteSpace=wrap;outlineConnect=0;fontSize=15;fontColor=#0F172A;strokeColor=#334155;fillColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="120" y="610" width="65" height="100" />
+        </mxCell>
+        <mxCell id="advisor" value="Avocat / Consultant KPMG /&#10;Directeur financier (CFO)" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=0;whiteSpace=wrap;outlineConnect=0;fontSize=15;fontColor=#0F172A;strokeColor=#334155;fillColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="120" y="910" width="65" height="100" />
+        </mxCell>
+        <mxCell id="expert" value="Expert KPMG&#10;(validateur)" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=0;whiteSpace=wrap;outlineConnect=0;fontSize=15;fontColor=#0F172A;strokeColor=#334155;fillColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1580" y="1140" width="65" height="100" />
+        </mxCell>
+        <mxCell id="watch" value="Obtenir une veille et un&#10;diagnostic d’impact réglementaire" style="ellipse;whiteSpace=wrap;html=0;fillColor=#EFF6FF;strokeColor=#2563EB;fontColor=#172554;fontSize=16;spacing=12;" vertex="1" parent="system">
+          <mxGeometry as="geometry" x="65" y="120" width="335" height="120" />
+        </mxCell>
+        <mxCell id="audit" value="Faire auditer un contrat&#10;et identifier les clauses à risque" style="ellipse;whiteSpace=wrap;html=0;fillColor=#EFF6FF;strokeColor=#2563EB;fontColor=#172554;fontSize=16;spacing=12;" vertex="1" parent="system">
+          <mxGeometry as="geometry" x="65" y="420" width="335" height="120" />
+        </mxCell>
+        <mxCell id="fiscal" value="Obtenir une ébauche de&#10;note de structuration fiscale" style="ellipse;whiteSpace=wrap;html=0;fillColor=#EFF6FF;strokeColor=#2563EB;fontColor=#172554;fontSize=16;spacing=12;" vertex="1" parent="system">
+          <mxGeometry as="geometry" x="65" y="720" width="335" height="120" />
+        </mxCell>
+        <mxCell id="produce" value="Produire un livrable&#10;fondé sur les sources" style="ellipse;whiteSpace=wrap;html=0;fillColor=#F0FDFA;strokeColor=#0D9488;fontColor=#134E4A;fontSize=15;spacing=12;" vertex="1" parent="system">
+          <mxGeometry as="geometry" x="520" y="420" width="280" height="120" />
+        </mxCell>
+        <mxCell id="search" value="Rechercher les références&#10;juridiques et fiscales pertinentes" style="ellipse;whiteSpace=wrap;html=0;fillColor=#F0FDFA;strokeColor=#0D9488;fontColor=#134E4A;fontSize=15;spacing=12;" vertex="1" parent="system">
+          <mxGeometry as="geometry" x="790" y="150" width="290" height="110" />
+        </mxCell>
+        <mxCell id="cite" value="Associer les citations&#10;et les liens vers les sources" style="ellipse;whiteSpace=wrap;html=0;fillColor=#F0FDFA;strokeColor=#0D9488;fontColor=#134E4A;fontSize=15;spacing=12;" vertex="1" parent="system">
+          <mxGeometry as="geometry" x="790" y="720" width="290" height="110" />
+        </mxCell>
+        <mxCell id="validate" value="Examiner et valider&#10;un livrable" style="ellipse;whiteSpace=wrap;html=0;fillColor=#FFF7ED;strokeColor=#D97706;fontSize=16;spacing=12;" vertex="1" parent="system">
+          <mxGeometry as="geometry" x="790" y="960" width="290" height="110" />
+        </mxCell>
+        <mxCell id="rule" value="CONTRAINTE DE LIVRAISON&#10;&#10;Tout livrable doit être validé par un expert KPMG avant sa mise à disposition.&#10;&#10;Ce diagramme représente les services et leurs acteurs ; il ne décrit pas leur ordre d’exécution." style="shape=note;whiteSpace=wrap;html=0;fillColor=#FFFBEB;strokeColor=#D97706;fontColor=#78350F;fontSize=14;align=left;spacing=15;size=20;" vertex="1" parent="system">
+          <mxGeometry as="geometry" x="65" y="950" width="420" height="170" />
+        </mxCell>
+        <mxCell id="a1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=14;strokeColor=#64748B;fontColor=#334155;labelBackgroundColor=#FFFFFF;endArrow=none;" edge="1" parent="1" source="director" target="watch">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="a2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=14;strokeColor=#64748B;fontColor=#334155;labelBackgroundColor=#FFFFFF;endArrow=none;" edge="1" parent="1" source="jurist" target="audit">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="a3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=14;strokeColor=#64748B;fontColor=#334155;labelBackgroundColor=#FFFFFF;endArrow=none;" edge="1" parent="1" source="advisor" target="fiscal">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="a4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=14;strokeColor=#64748B;fontColor=#334155;labelBackgroundColor=#FFFFFF;endArrow=none;" edge="1" parent="1" source="expert" target="validate">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="i1" value="«include»" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=14;strokeColor=#64748B;fontColor=#334155;labelBackgroundColor=#FFFFFF;endArrow=open;endFill=0;dashed=1;exitX=1;exitY=0.5;entryX=0;entryY=0.25;" edge="1" parent="1" source="watch" target="produce">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="790" y="360" />
+              <mxPoint x="790" y="620" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="i2" value="«include»" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=14;strokeColor=#64748B;fontColor=#334155;labelBackgroundColor=#FFFFFF;endArrow=open;endFill=0;dashed=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="audit" target="produce">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="i3" value="«include»" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=14;strokeColor=#64748B;fontColor=#334155;labelBackgroundColor=#FFFFFF;endArrow=open;endFill=0;dashed=1;exitX=1;exitY=0.5;entryX=0;entryY=0.75;" edge="1" parent="1" source="fiscal" target="produce">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="790" y="960" />
+              <mxPoint x="790" y="690" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="i4" value="«include»" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=14;strokeColor=#64748B;fontColor=#334155;labelBackgroundColor=#FFFFFF;endArrow=open;endFill=0;dashed=1;exitX=0.5;exitY=0;entryX=0;entryY=0.5;" edge="1" parent="1" source="produce" target="search">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="990" y="385" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="i5" value="«include»" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=14;strokeColor=#64748B;fontColor=#334155;labelBackgroundColor=#FFFFFF;endArrow=open;endFill=0;dashed=1;exitX=0.5;exitY=1;entryX=0;entryY=0.5;" edge="1" parent="1" source="produce" target="cite">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="990" y="955" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=14;strokeColor=#64748B;fontColor=#334155;labelBackgroundColor=#FFFFFF;endArrow=none;dashed=1;" edge="1" parent="1" source="rule" target="validate">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="legend" value="LECTURE UML&#10;Trait simple : association acteur–service.&#10;«include» : fonction commune obligatoirement utilisée, flèche dirigée vers le cas inclus.&#10;Les personnes placées hors du cadre interagissent avec LexAI." style="text;html=0;whiteSpace=wrap;align=left;fontColor=#0F172A;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="60" y="1380" width="760" height="150" />
+        </mxCell>
+        <mxCell id="scope" value="SOURCE ET CHOIX DE MODÉLISATION&#10;LexAI (1).pdf, pages 2–3. Les fonctions RAG sont regroupées en cas communs. Les sources BOFiP, Légifrance et la doctrine KPMG sont des données de référence, pas des acteurs humains. La gestion des abonnements et l’administration ne sont pas détaillées dans le document." style="text;html=0;whiteSpace=wrap;align=left;fontColor=#0F172A;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="900" y="1380" width="830" height="150" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

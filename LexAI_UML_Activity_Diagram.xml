@@ -1,0 +1,208 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" version="24.7.17" type="device">
+  <diagram id="lexai-activity" name="LexAI - Activités">
+    <mxGraphModel dx="1700" dy="2600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="2600" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="LexAI | Diagramme UML d’activités" style="text;html=0;whiteSpace=wrap;align=left;fontColor=#0F172A;fontSize=30;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="55" y="25" width="1590" height="55" />
+        </mxCell>
+        <mxCell id="subtitle" value="Traitement d’une demande : veille réglementaire, audit contractuel ou structuration fiscale" style="text;html=0;whiteSpace=wrap;align=left;fontColor=#0F172A;fontSize=17;fontColor=#475569;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="55" y="90" width="1590" height="45" />
+        </mxCell>
+        <mxCell id="initial" value="" style="ellipse;fillColor=#0F172A;strokeColor=#0F172A;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="785" y="160" width="30" height="30" />
+        </mxCell>
+        <mxCell id="submit" value="Utilisateur : soumettre une demande&#10;et sélectionner le module" style="rounded=1;arcSize=30;whiteSpace=wrap;html=0;fillColor=#EFF6FF;strokeColor=#2563EB;fontColor=#172554;fontSize=15;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="640" y="225" width="320" height="75" />
+        </mxCell>
+        <mxCell id="access" value="LexAI : vérifier les droits d’accès&#10;et l’offre souscrite" style="rounded=1;arcSize=30;whiteSpace=wrap;html=0;fillColor=#EFF6FF;strokeColor=#2563EB;fontColor=#172554;fontSize=15;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="640" y="345" width="320" height="75" />
+        </mxCell>
+        <mxCell id="authorized" value="Accès&#10;autorisé ?" style="rhombus;whiteSpace=wrap;html=0;fillColor=#FFFBEB;strokeColor=#D97706;fontColor=#78350F;fontSize=14;spacing=3;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="730" y="460" width="140" height="85" />
+        </mxCell>
+        <mxCell id="deny" value="LexAI : notifier le refus d’accès" style="rounded=1;arcSize=30;whiteSpace=wrap;html=0;fillColor=#EFF6FF;strokeColor=#2563EB;fontColor=#172554;fontSize=15;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1100" y="465" width="320" height="75" />
+        </mxCell>
+        <mxCell id="end_denied" value="" style="shape=doubleEllipse;fillColor=#0F172A;strokeColor=#0F172A;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1480" y="487" width="30" height="30" />
+        </mxCell>
+        <mxCell id="module" value="Module ?" style="rhombus;whiteSpace=wrap;html=0;fillColor=#FFFBEB;strokeColor=#D97706;fontColor=#78350F;fontSize=14;spacing=3;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="730" y="600" width="140" height="85" />
+        </mxCell>
+        <mxCell id="watch" value="LexAI : surveiller les évolutions&#10;réglementaires dans le périmètre défini" style="rounded=1;arcSize=30;whiteSpace=wrap;html=0;fillColor=#EFF6FF;strokeColor=#2563EB;fontColor=#172554;fontSize=15;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="140" y="750" width="340" height="85" />
+        </mxCell>
+        <mxCell id="event" value="Attendre la détection d’une&#10;évolution réglementaire pertinente" style="shape=mxgraph.uml25.accept_event_action;whiteSpace=wrap;html=0;fillColor=#EFF6FF;strokeColor=#2563EB;fontSize=15;spacing=12;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="140" y="890" width="340" height="85" />
+        </mxCell>
+        <mxCell id="contract" value="Utilisateur : transmettre le contrat&#10;LexAI : extraire son contenu" style="rounded=1;arcSize=30;whiteSpace=wrap;html=0;fillColor=#EFF6FF;strokeColor=#2563EB;fontColor=#172554;fontSize=15;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="630" y="750" width="340" height="85" />
+        </mxCell>
+        <mxCell id="tax" value="Utilisateur : préciser la question fiscale&#10;et son contexte" style="rounded=1;arcSize=30;whiteSpace=wrap;html=0;fillColor=#EFF6FF;strokeColor=#2563EB;fontColor=#172554;fontSize=15;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1120" y="750" width="340" height="85" />
+        </mxCell>
+        <mxCell id="join_modules" value="" style="rhombus;whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#64748B;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="775" y="1040" width="50" height="50" />
+        </mxCell>
+        <mxCell id="join_retry" value="" style="rhombus;whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#64748B;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="775" y="1140" width="50" height="50" />
+        </mxCell>
+        <mxCell id="retrieve" value="RAG : rechercher les articles et mémos&#10;pertinents dans les fonds publics et KPMG" style="rounded=1;arcSize=30;whiteSpace=wrap;html=0;fillColor=#EFF6FF;strokeColor=#2563EB;fontColor=#172554;fontSize=15;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="620" y="1250" width="360" height="85" />
+        </mxCell>
+        <mxCell id="enough" value="Sources&#10;suffisantes ?" style="rhombus;whiteSpace=wrap;html=0;fillColor=#FFFBEB;strokeColor=#D97706;fontColor=#78350F;fontSize=14;spacing=3;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="725" y="1390" width="150" height="90" />
+        </mxCell>
+        <mxCell id="ask" value="LexAI : demander des compléments&#10;ou signaler les références manquantes" style="rounded=1;arcSize=30;whiteSpace=wrap;html=0;fillColor=#EFF6FF;strokeColor=#2563EB;fontColor=#172554;fontSize=15;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="150" y="1395" width="340" height="85" />
+        </mxCell>
+        <mxCell id="complete" value="Utilisateur / expert : compléter le contexte&#10;ou les références disponibles" style="rounded=1;arcSize=30;whiteSpace=wrap;html=0;fillColor=#FFF7ED;strokeColor=#D97706;fontColor=#7C2D12;fontSize=15;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="150" y="1550" width="340" height="85" />
+        </mxCell>
+        <mxCell id="generate" value="RAG : produire le livrable à partir&#10;des sources extraites et joindre les citations" style="rounded=1;arcSize=30;whiteSpace=wrap;html=0;fillColor=#EFF6FF;strokeColor=#2563EB;fontColor=#172554;fontSize=15;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="620" y="1560" width="360" height="90" />
+        </mxCell>
+        <mxCell id="review" value="Expert KPMG : examiner le livrable&#10;et vérifier les références" style="rounded=1;arcSize=30;whiteSpace=wrap;html=0;fillColor=#FFF7ED;strokeColor=#D97706;fontColor=#7C2D12;fontSize=15;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="620" y="1730" width="360" height="85" />
+        </mxCell>
+        <mxCell id="approved" value="Livrable&#10;approuvé ?" style="rhombus;whiteSpace=wrap;html=0;fillColor=#FFFBEB;strokeColor=#D97706;fontColor=#78350F;fontSize=14;spacing=3;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="725" y="1870" width="150" height="90" />
+        </mxCell>
+        <mxCell id="feedback" value="Expert KPMG : préciser les corrections&#10;et les compléments nécessaires" style="rounded=1;arcSize=30;whiteSpace=wrap;html=0;fillColor=#FFF7ED;strokeColor=#D97706;fontColor=#7C2D12;fontSize=15;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1130" y="1875" width="340" height="85" />
+        </mxCell>
+        <mxCell id="revise" value="LexAI : intégrer les observations&#10;au contexte de la demande" style="rounded=1;arcSize=30;whiteSpace=wrap;html=0;fillColor=#EFF6FF;strokeColor=#2563EB;fontColor=#172554;fontSize=15;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1130" y="1700" width="340" height="85" />
+        </mxCell>
+        <mxCell id="deliver" value="LexAI : mettre le livrable validé&#10;à disposition de l’utilisateur" style="rounded=1;arcSize=30;whiteSpace=wrap;html=0;fillColor=#ECFDF5;strokeColor=#059669;fontSize=15;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="620" y="2050" width="360" height="85" />
+        </mxCell>
+        <mxCell id="final" value="" style="shape=doubleEllipse;fillColor=#0F172A;strokeColor=#0F172A;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="785" y="2210" width="30" height="30" />
+        </mxCell>
+        <mxCell id="e01" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=open;endFill=0;strokeColor=#475569;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="initial" target="submit">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e02" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=open;endFill=0;strokeColor=#475569;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="submit" target="access">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e03" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=open;endFill=0;strokeColor=#475569;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="access" target="authorized">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e04" value="[non]" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=open;endFill=0;strokeColor=#475569;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="authorized" target="deny">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e05" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=open;endFill=0;strokeColor=#475569;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="deny" target="end_denied">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e06" value="[oui]" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=open;endFill=0;strokeColor=#475569;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="authorized" target="module">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e07" value="[veille]" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=open;endFill=0;strokeColor=#475569;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="module" target="watch">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="310" y="642" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e08" value="[audit contractuel]" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=open;endFill=0;strokeColor=#475569;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="module" target="contract">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e09" value="[structuration fiscale]" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=open;endFill=0;strokeColor=#475569;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="module" target="tax">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1290" y="642" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=open;endFill=0;strokeColor=#475569;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="watch" target="event">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=open;endFill=0;strokeColor=#475569;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="event" target="join_modules">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="310" y="1065" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=open;endFill=0;strokeColor=#475569;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="contract" target="join_modules">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=open;endFill=0;strokeColor=#475569;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="tax" target="join_modules">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1290" y="1065" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=open;endFill=0;strokeColor=#475569;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="join_modules" target="join_retry">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=open;endFill=0;strokeColor=#475569;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="join_retry" target="retrieve">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=open;endFill=0;strokeColor=#475569;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="retrieve" target="enough">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e17" value="[non]" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=open;endFill=0;strokeColor=#475569;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="enough" target="ask">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=open;endFill=0;strokeColor=#475569;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="ask" target="complete">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e19" value="compléments fournis" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=open;endFill=0;strokeColor=#475569;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;exitX=0;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="complete" target="join_retry">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="85" y="1592" />
+              <mxPoint x="85" y="1165" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e20" value="[oui]" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=open;endFill=0;strokeColor=#475569;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="enough" target="generate">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=open;endFill=0;strokeColor=#475569;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="generate" target="review">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e22" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=open;endFill=0;strokeColor=#475569;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="review" target="approved">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e23" value="[non]" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=open;endFill=0;strokeColor=#475569;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="approved" target="feedback">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e24" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=open;endFill=0;strokeColor=#475569;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="feedback" target="revise">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e25" value="relancer avec le contexte révisé" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=open;endFill=0;strokeColor=#475569;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;entryX=1;entryY=0.5;" edge="1" parent="1" source="revise" target="join_retry">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1550" y="1742" />
+              <mxPoint x="1550" y="1165" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e26" value="[oui]" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=open;endFill=0;strokeColor=#475569;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="approved" target="deliver">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e27" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=open;endFill=0;strokeColor=#475569;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="deliver" target="final">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="assumptions" value="PÉRIMÈTRE ET HYPOTHÈSES&#10;&#10;Un traitement par demande ou événement détecté. Les branches des modules sont alternatives.&#10;&#10;Les contrôles d’accès, les compléments et les reprises après correction sont des hypothèses de modélisation.&#10;&#10;La validation humaine systématique est explicitement prévue par le PDF." style="shape=note;whiteSpace=wrap;html=0;fillColor=#F8FAFC;strokeColor=#94A3B8;fontColor=#334155;fontSize=14;align=left;spacing=15;size=20;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="60" y="225" width="480" height="340" />
+        </mxCell>
+        <mxCell id="outputs" value="LIVRABLES&#10;&#10;Veille : diagnostic d’impact et alerte sur les risques.&#10;Audit : analyse des clauses à risque.&#10;Fiscal : ébauche de note de synthèse avec citations.&#10;&#10;Les données sont préalablement indexées et vectorisées dans un périmètre sécurisé." style="shape=note;whiteSpace=wrap;html=0;fillColor=#F8FAFC;strokeColor=#94A3B8;fontColor=#334155;fontSize=14;align=left;spacing=15;size=20;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1070" y="225" width="480" height="210" />
+        </mxCell>
+        <mxCell id="legend" value="LECTURE UML&#10;Rectangle arrondi : action. Losange : décision ou fusion.&#10;Nœud d’acceptation : attente d’un événement.&#10;Disque : début. Double cercle : fin de l’activité.&#10;[condition] : garde de la branche.&#10;Les rôles responsables sont indiqués dans les actions." style="text;html=0;whiteSpace=wrap;align=left;fontColor=#0F172A;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="60" y="2310" width="760" height="200" />
+        </mxCell>
+        <mxCell id="source" value="Source : LexAI (1).pdf, pages 2–4.&#10;&#10;La livraison intervient après validation par un expert KPMG, y compris pour les alertes : ce séquencement est une interprétation du document. La fin clôt ce traitement, pas le service permanent de veille. Les erreurs techniques et l’annulation ne sont pas détaillées." style="text;html=0;whiteSpace=wrap;align=left;fontColor=#0F172A;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="900" y="2310" width="740" height="200" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,14 @@
+LexAI — Assistant IA
+
+1. Extraire tout le ZIP.
+2. Ouvrir Web/dist/index.html dans Edge ou Chrome.
+3. Assistant IA > Charger l'IA. Attendre IA prête.
+4. Cliquer Exemple : préavis de 30 jours, puis Envoyer.
+5. Pour votre dossier : Espace d'analyse > références + question + faits > Créer une ébauche.
+6. Vérifier, approuver (simulation), puis exporter.
+
+Pas de Python, installation ou clé API. Premier téléchargement du modèle léger : environ 400 Mo ; Internet et WebGPU requis. Un GPU compatible est nécessaire. Les poids ne sont pas dans ce ZIP.
+PDF : utiliser le site web ou coller le texte du PDF dans la copie locale.
+Lire Web/AI-GUIDE.md pour les limites et détails.
+Cette version web remplace l'ancienne démonstration Windows pour utiliser l'assistant IA.
+Le site hébergé conserve son accès privé ; ce ZIP peut être partagé avec votre camarade.
