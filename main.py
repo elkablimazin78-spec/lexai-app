@@ -1,4 +1,5 @@
 import os
+from typing import Optional
 import requests
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
@@ -14,10 +15,11 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-API_KEY = "AQ.Ab8RN6L8W0QKaa_ssn2j_45Y3EGIYAEFtrgjGq_1q0prnrfB7A"
+API_KEY = "AQ.Ab8RN6JtdhmC6nP8zfHfaqwE1XTUerhmLSvwDPSzIRczvnsQTg"
 
 class QueryRequest(BaseModel):
     question: str
+    document_text: Optional[str] = ""
 
 class QueryResponse(BaseModel):
     answer: str
@@ -33,10 +35,12 @@ def handle_rag_query(request: QueryRequest):
         # Utilisation du modèle gemini-3.5-flash-lite
         url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key={API_KEY}"
         
+        # Le prompt intègre désormais dynamiquement le texte du document et la question
         prompt_text = (
             "Tu es LexAI, un avocat-conseil expert en droit et fiscalité (doctrine KPMG). "
             "Analyse ce cas de manière rigoureuse et structure ta réponse en 3 parties : "
             "1) Qualification juridique des faits, 2) Analyse des risques, 3) Recommandations pratiques.\n\n"
+            f"--- DOCUMENTS / DOSSIER À ANALYSER ---\n{request.document_text}\n----------------------------------\n\n"
             f"Cas de l'utilisateur : {request.question}"
         )
 
@@ -46,7 +50,7 @@ def handle_rag_query(request: QueryRequest):
             }]
         }
 
-        response = requests.post(url, json=payload, timeout=15)
+        response = requests.post(url, json=payload, timeout=60)
         data = response.json()
 
         if "candidates" in data and len(data["candidates"]) > 0:
