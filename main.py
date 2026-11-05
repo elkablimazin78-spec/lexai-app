@@ -47,7 +47,7 @@ async def read_index():
 async def chat_with_ai(request: QueryRequest):
     try:
         response = client.models.generate_content(
-            model="gemini-2.5-flash",
+            model="gemini-3.1-flash-lite",
             contents=request.prompt
         )
         return {"response": response.text}
@@ -57,8 +57,8 @@ async def chat_with_ai(request: QueryRequest):
 @app.post("/api/rag-query", response_model=QueryResponse)
 def handle_rag_query(request: QueryRequest):
     try:
-        # Utilisation du modèle gemini-3.5-flash-lite
-        url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key={API_KEY}"
+        # Utilisation du modèle gemini-3.1-flash-lite
+        url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent?key={API_KEY}"
         
         # Le prompt intègre désormais dynamiquement le texte du document et la question
         prompt_text = (
