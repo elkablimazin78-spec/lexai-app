@@ -21,6 +21,10 @@ API_KEY = os.getenv("GEMINI_API_KEY")
 client= genai.Client(api_key=API_KEY)                
 
 class QueryRequest(BaseModel):
+    prompt: str
+
+
+class QueryRequest(BaseModel):
     question: str
     document_text: Optional[str] = ""
 
@@ -32,8 +36,7 @@ class QueryResponse(BaseModel):
 async def read_index():
     return FileResponse("index.html")
 
-class QueryRequest(BaseModel):
-    prompt: str
+
 
 @app.post("/chat")
 async def chat_with_ai(request: QueryRequest):
