@@ -15,7 +15,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-API_KEY = "AQ.Ab8RN6JtdhmC6nP8zfHfaqwE1XTUerhmLSvwDPSzIRczvnsQTg"
+API_KEY = os.getenv("GEMINI_API_KEY")
 
 class QueryRequest(BaseModel):
     question: str
