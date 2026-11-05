@@ -27,7 +27,7 @@ class QueryResponse(BaseModel):
 
 @app.get("/")
 async def read_index():
-    return FileResponse("Web/index.html")
+    return FileResponse("index.html")
 
 @app.post("/api/rag-query", response_model=QueryResponse)
 def handle_rag_query(request: QueryRequest):
