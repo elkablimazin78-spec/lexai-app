@@ -53,7 +53,7 @@ async def chat_with_ai(request: QueryRequest):
 @app.post("/api/rag-query", response_model=QueryResponse)
 def handle_rag_query(request: QueryRequest):
     try:
-        url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={API_KEY}"
+        url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash:generateContent?key={API_KEY}"
         
         prompt_text = (
             "Tu es LexAI, un avocat-conseil expert en droit et fiscalité (doctrine KPMG). "
