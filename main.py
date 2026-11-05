@@ -17,6 +17,7 @@ app.add_middleware(
 )
 
 API_KEY = os.getenv("GEMINI_API_KEY")
+client= genai.Client(API_KEY=API_KEY)                
 
 class QueryRequest(BaseModel):
     question: str
