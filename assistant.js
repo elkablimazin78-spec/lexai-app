@@ -80,15 +80,12 @@ el('ai-clear').onclick=()=>{
     el('ai-messages').innerHTML='<div class="ai-welcome">Nouvelle conversation. Posez votre question juridique.</div>';
 };
 
-// Fonction de communication sécurisée récupérant le document et les champs de l'espace d'analyse
+// Fonction de communication sécurisée avec le backend Python
 async function sendQueryToBackend(userQuestion) {
     const useSource = el('ai-use-source') ? el('ai-use-source').checked : true;
     let documentText = "";
     
     if (useSource) {
-        // Récupère dynamiquement le texte affiché dans la zone des références documentaires de l'espace d'analyse
-        const docPreview = document.querySelector('#workspace, .workspace, pre, .callout, textarea');
-        // Récupère aussi ce qui a pu être saisi dans les champs de texte de l'espace d'analyse s'ils existent
         const textareas = document.querySelectorAll('textarea');
         let extraContext = "";
         textareas.forEach(ta => {
@@ -97,7 +94,7 @@ async function sendQueryToBackend(userQuestion) {
             }
         });
 
-        const sourceInfoElement = document.getElementById('ai-source-info') || docPreview;
+        const sourceInfoElement = document.getElementById('ai-source-info');
         documentText = (sourceInfoElement ? sourceInfoElement.innerText : "") + "\n" + extraContext;
         if (!documentText.trim()) {
             documentText = "Fiche d'analyse de cas juridique chargée.";
@@ -105,20 +102,20 @@ async function sendQueryToBackend(userQuestion) {
     }
 
     try {
-        const response = await fetch('/chat', {
+        const response = await fetch('/api/rag-query', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ 
-                question: userMessage,
-                document_text: currentDocumentText 
+                question: userQuestion,
+                document_text: documentText 
             })
         });
         if (!response.ok) throw new Error('Erreur de réponse du serveur Python');
         return await response.json(); 
     } catch (error) {
         console.error('Erreur de connexion:', error);
-        addMessageToChat("Erreur technique : " + error.message,"bot"); []
-        };
+        addMessage('assistant', "Erreur technique : " + error.message);
+        return { answer: "Erreur de communication avec le serveur.", sources: [] };
     }
 }
 
@@ -149,10 +146,10 @@ if (form) {
         
         const message = addMessage('assistant', '🧠 Analyse croisée du document et de la doctrine KPMG en cours...');
         
-        // Appel au backend Python avec transmission complète du dossier et du contexte
+        // Appel au backend Python
         const data = await sendQueryToBackend(question);
         
-        let finalOutput = data.answer;
+        let finalOutput = data.answer || "Aucune réponse reçue.";
         if(data.sources && data.sources.length > 0) {
             finalOutput += "\n\n**Références & Sources Juridiques :**\n" + data.sources.map(s => `• ${s}`).join('\n');
         }
