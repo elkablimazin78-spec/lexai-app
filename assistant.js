@@ -116,10 +116,8 @@ async function sendQueryToBackend(userQuestion) {
         if (!response.ok) throw new Error('Erreur de réponse du serveur Python');
         return await response.json(); 
     } catch (error) {
-        console.error('Erreur Backend:', error);
-        return {
-            answer: "Impossible de contacter le serveur Python FastAPI. Vérifiez qu'il est bien démarré dans le terminal.",
-            sources: []
+        console.error('Erreur de connexion:', error);
+        addMessageToChat("Erreur technique : " + error.message,"bot"); []
         };
     }
 }
