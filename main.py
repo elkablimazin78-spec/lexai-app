@@ -1,18 +1,13 @@
-import os
-from typing import Optional
-import requests
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 from pydantic import BaseModel
 from google import genai
+import os
+from typing import Optional
+import requests
 
 app = FastAPI(title="LexAI RAG Backend", version="6.4")
-
-@app.get("/assistant.js")
-async def get_assistant_js():
-    return FileResponse("assistant.js")
-
 
 app.add_middleware(
     CORSMiddleware,
@@ -23,12 +18,9 @@ app.add_middleware(
 )
 
 API_KEY = os.getenv("GEMINI_API_KEY")
-client= genai.Client(api_key=API_KEY)                
+client = genai.Client(api_key=API_KEY)
 
-class QueryRequest(BaseModel):
-    prompt: str
-
-
+# ✅ Une seule définition propre de la requête
 class QueryRequest(BaseModel):
     question: str
     document_text: Optional[str] = ""
@@ -41,26 +33,28 @@ class QueryResponse(BaseModel):
 async def read_index():
     return FileResponse("index.html")
 
-
+@app.get("/assistant.js")
+async def get_assistant_js():
+    return FileResponse("assistant.js")
 
 @app.post("/chat")
 async def chat_with_ai(request: QueryRequest):
     try:
+        # Utilisation de request.question au lieu de request.prompt
         response = client.models.generate_content(
-            model="gemini-3.1-flash-lite",
-            contents=request.prompt
+            model="gemini-2.5-flash", # Assurez-vous que le nom du modèle est valide (ex: gemini-2.5-flash ou gemini-1.5-flash)
+            contents=request.question
         )
         return {"response": response.text}
     except Exception as e:
-        return {"error": str(e)}
+        print(f"ERREUR CHAT : {str(e)}")
+        raise HTTPException(status_code=500, detail=str(e))
 
 @app.post("/api/rag-query", response_model=QueryResponse)
 def handle_rag_query(request: QueryRequest):
     try:
-        # Utilisation du modèle gemini-3.1-flash-lite
-        url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent?key={API_KEY}"
+        url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={API_KEY}"
         
-        # Le prompt intègre désormais dynamiquement le texte du document et la question
         prompt_text = (
             "Tu es LexAI, un avocat-conseil expert en droit et fiscalité (doctrine KPMG). "
             "Analyse ce cas de manière rigoureuse et structure ta réponse en 3 parties : "
