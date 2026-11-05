@@ -32,6 +32,20 @@ class QueryResponse(BaseModel):
 async def read_index():
     return FileResponse("index.html")
 
+class QueryRequest(BaseModel):
+    prompt: str
+
+@app.post("/chat")
+async def chat_with_ai(request: QueryRequest):
+    try:
+        response = client.models.generate_content(
+            model="gemini-2.5-flash",
+            contents=request.prompt
+        )
+        return {"response": response.text}
+    except Exception as e:
+        return {"error": str(e)}
+
 @app.post("/api/rag-query", response_model=QueryResponse)
 def handle_rag_query(request: QueryRequest):
     try:
