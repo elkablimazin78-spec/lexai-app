@@ -5,6 +5,7 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 from pydantic import BaseModel
+from google import genai
 
 app = FastAPI(title="LexAI RAG Backend", version="6.4")
 
@@ -17,7 +18,7 @@ app.add_middleware(
 )
 
 API_KEY = os.getenv("GEMINI_API_KEY")
-client= genai.Client(API_KEY=API_KEY)                
+client= genai.Client(api_key=API_KEY)                
 
 class QueryRequest(BaseModel):
     question: str
