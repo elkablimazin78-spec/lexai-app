@@ -26,8 +26,8 @@ class QueryResponse(BaseModel):
     sources: list[str]
 
 @app.get("/")
-def read_root():
-    return {"status": "OK"}
+async def read_index():
+    return FileResponse("C:\Users\pc\Desktop\LexAI-Assistant-IA\main.py")
 
 @app.post("/api/rag-query", response_model=QueryResponse)
 def handle_rag_query(request: QueryRequest):
