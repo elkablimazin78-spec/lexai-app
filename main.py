@@ -9,6 +9,11 @@ from google import genai
 
 app = FastAPI(title="LexAI RAG Backend", version="6.4")
 
+@app.get("/assistant.js")
+async def get_assistant_js():
+    return FileResponse("assistant.js")
+
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
